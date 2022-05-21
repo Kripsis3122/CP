@@ -1,0 +1,16 @@
+﻿@model FactListViewModel
+
+<h1>Mystic</h1>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (var fact in Model.AllFacts)
+        {
+            <div class="col-lg-4">
+                <h2 align="center">@fact.factName</h2>
+                <p>@fact.shortDesc</p>
+                <p>Author: @fact.authorName<p align="left">Date: @fact.date</p></p>
+                <p><a class="btn btn-warning" href="#">Read More</a></p>
+            </div>
+        }
+    }
+</div>
